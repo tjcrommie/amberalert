@@ -1,0 +1,84 @@
+{
+  "amberAlert" : {
+    "vehicle" : {
+      "photo" : "URL to be generated",
+      "year" : "2013",
+      "make" : "ACU",
+      "model" : "MDX",
+      "color" : "BLU",
+      "plate" : "VEHICLE",
+      "state" : "NJ"
+    },
+    "agencyInformation" : {
+      "phoneNo" : "(548)  85-8333 or 911",
+      "agencyName" : "Penn State Criminal Justice Dept"
+    },
+    "title" : "AMBER ALERT",
+    "abducted_From" : "Edison, New Jersey",
+    "date_Abducted" : 1566792000000,
+    "missingChildren" : [ {
+      "photo" : "URL to be generated",
+      "name" : "ELEF MIDDLENAME DZOV",
+      "age" : "1 Month",
+      "sex" : "Female",
+      "height" : "5'11\"",
+      "weight" : "199 lbs.",
+      "hair" : "Black",
+      "eyes" : "brownish",
+      "race" : "White"
+    }, {
+      "photo" : "URL to be generated",
+      "name" : "OGIG MIDDLENAME COKR",
+      "age" : "10 Year",
+      "sex" : "Female",
+      "height" : "5'11\"",
+      "weight" : "199 lbs.",
+      "hair" : "Black",
+      "eyes" : "brownish",
+      "race" : "White"
+    }, {
+      "photo" : "URL to be generated",
+      "name" : "DCKA M IHCN",
+      "age" : "10 Year",
+      "sex" : "Female",
+      "height" : "5'11\"",
+      "weight" : "199 lbs.",
+      "hair" : "Black",
+      "eyes" : "brownish",
+      "race" : "White"
+    }, {
+      "photo" : "URL to be generated",
+      "name" : "QIJK M SYGC",
+      "age" : "10 Year",
+      "sex" : "Female",
+      "height" : "5'11\"",
+      "weight" : "199 lbs.",
+      "hair" : "Black",
+      "eyes" : "brownish",
+      "race" : "White"
+    } ],
+    "suspectVehicleInfoLabel" : "Suspect/Vehicle Information",
+    "suspects" : [ {
+      "photo" : "URL to be generated",
+      "name" : "POTHAN F GORGE",
+      "dob" : 1566792000000,
+      "sex" : "Male",
+      "height" : "6'02\"",
+      "weight" : "178 lbs.",
+      "hair" : "Brown",
+      "eyes" : "Black",
+      "race" : "Asian"
+    }, {
+      "photo" : "URL to be generated",
+      "name" : "MAKAPA M WESTLY",
+      "dob" : 1566792000000,
+      "sex" : "Female",
+      "height" : "5'11\"",
+      "weight" : "158 lbs.",
+      "hair" : "Black",
+      "eyes" : "brownish",
+      "race" : "White"
+    } ],
+    "other_Information" : "This child was abducted under dangerous circumstances"
+  }
+}
