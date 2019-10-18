@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Our superheroes</title>
+<link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header> </header>
+<section> </section>
+<script>
+    var header = document.querySelector('header');
+    var section = document.querySelector('section');
+    
+	var requestURL = 'https://raw.githubusercontent.com/tjcrommie/amberalert/master/amberjson.json';
+	var request = new XMLHttpRequest();
+	request.open('GET', requestURL);
+	request.responseType = 'json';
+	request.send();
+	request.onload = function() {
+	var amberAlt = request.response;	
+	}
+	
+	var jsondata = JSON.parse(amberAlt);
+ 
+	document.getElementById("user").innerHTML = "Name: " + jsondata.amberAlert.missingChildren.age + "Hair" + jsondata.amberAlert.missingChildren.hair;
+}
+	
+    </script>
+	<p id="user">his</p>
+</body>
+</html>

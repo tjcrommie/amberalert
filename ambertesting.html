@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Our superheroes</title>
+<link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header> </header>
+<div id="missingchild"> </div>
+<div id="missingsuspect"> </div>
+<div id="missingvehicle"> </div>
+<script>
+    var header = document.querySelector('header');
+    var section = document.querySelector('child');
+    
+	var requestURL = 'https://raw.githubusercontent.com/tjcrommie/amberalert/master/amberjson.json';
+	var request = new XMLHttpRequest();
+	request.open('GET', requestURL);
+	request.responseType = 'json';
+	request.send();
+	request.onload = function() {
+	var amberAlt = request.response;
+
+	  populateHeader(amberAlt);
+	  populatechild(amberAlt);
+	  populatesuspect(amberAlt);
+	  populatevehicle(amberAlt);
+	  console.log(amberAlt);
+	}
+	
+	function populateHeader(jsonObj) {
+    var myH1 = document.createElement('h1');
+		
+    myH1.textContent = jsonObj.amberAlert.title +' '+ jsonObj.amberAlert.agencyInformation.phoneNo;
+    header.appendChild(myH1);
+	}
+	
+	function populatechild(jsonObj) {
+
+   var myPara = document.createElement('p');
+		for ( var i = 0; i < jsonObj.amberAlert.missingChildren.length; i++) {
+   myPara.textContent = 'Missing Child: ' 
+	    + jsonObj.amberAlert.missingChildren[i].photo +" "
+		+ jsonObj.amberAlert.missingChildren[i].name +" "
+		+ jsonObj.amberAlert.missingChildren[i].sex +" "
+		+ jsonObj.amberAlert.missingChildren[i].age +" "
+		+ jsonObj.amberAlert.missingChildren[i].height +" "
+		+ jsonObj.amberAlert.missingChildren[i].weight +" "
+		+ jsonObj.amberAlert.missingChildren[i].hair +" "
+		+ jsonObj.amberAlert.missingChildren[i].eyes +" "
+	    + jsonObj.amberAlert.missingChildren[i].race ;
+		
+	missingchild.appendChild(myPara);
+    missingchild.innerHTML += myPara;
+		}
+}
+	function populatesuspect(jsonObj) {
+
+   var myPara = document.createElement('p');
+   myPara.textContent = 'Missing Suspect: ' 
+	    + jsonObj.amberAlert.suspects[0].photo +" "
+		+ jsonObj.amberAlert.suspects[0].name +" "
+		+ jsonObj.amberAlert.suspects[0].sex +" "
+		+ jsonObj.amberAlert.suspects[0].dob +" "
+		+ jsonObj.amberAlert.suspects[0].height +" "
+		+ jsonObj.amberAlert.suspects[0].weight +" "
+		+ jsonObj.amberAlert.suspects[0].hair +" "
+		+ jsonObj.amberAlert.suspects[0].eyes +" "
+	    + jsonObj.amberAlert.suspects[0].race
+   ;
+   missingsuspect.appendChild(myPara);
+}
+	function populatevehicle(jsonObj) {
+
+   var myPara = document.createElement('p');
+   myPara.textContent = 'Missing Vehicle: ' 
+	    + jsonObj.amberAlert.vehicle.photo +" "
+		+ jsonObj.amberAlert.vehicle.year +" "
+		+ jsonObj.amberAlert.vehicle.make +" "
+		+ jsonObj.amberAlert.vehicle.model +" "
+		+ jsonObj.amberAlert.vehicle.color +" "
+		+ jsonObj.amberAlert.vehicle.plate +" "
+		+ jsonObj.amberAlert.vehicle.state 
+   ;
+    missingvehicle.appendChild(myPara);
+	
+}
+    </script>
+</body>
+</html>
