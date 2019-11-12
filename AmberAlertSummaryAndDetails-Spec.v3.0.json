@@ -1,0 +1,67 @@
+{
+	"amberAlerts": 
+	{
+		"activeAmberAlerts": Boolean, 		<-- Mandatorily provided either true or false-->
+		"amberAlertSummaries": [  			<!--when an active alert is available minimum="1" maximum="N" -->
+			{ 								<-- Summaries and Details below work in one to one relation -->
+			  "alertId": Number, 			<-- use this to correlate with details below -->
+			  "alertStatus": String			<!-- ACTIVE or CANCELLED -->
+			  "name": String,
+			  "dateAbducted": String,
+			  "abductedFrom": String,
+			}
+		],
+		"amberAlertDetails":[ 		<!--when an active alert is available minimum="1" maximum="N" -->
+			{
+				"alertId": Number, 			<!-- use this to correlate with summary above -->
+				"abductedFrom": String,
+				"dateAbducted": String,
+				"posterLink": String, 		<!-- Servlet URL for callback on IJPortal to get Poster in PDF format from Amber Alert Applciation"-->
+				"regions": [ Number], 		<!-- minimum="1" maximum="12" 	-->
+				"activationDateTime": String, 	<!-- Date and time when this amber alert was activated. -->
+				"cancellationDateTime": String, <!-- Date and time when this amber alert was cancelled. Use this in conjunction with alertStatus above. When alertStatus is CANCELLED, a cancel date will be provided -->
+				"missingChildren": [ 		<!-- minimum="1" maximum="4" 	-->
+					{
+						"photo": String, 	<!-- Servlet URL for callback on IJPortal to get Photo from Amber Alert Applciation"-->
+						"name": String,
+						"age": String,
+						"sex": String,
+						"height": String,
+						"weight": String,
+						"hair": String,
+						"eyes": String,
+						"race": String
+					}
+				],
+				"suspects": [ 				<!--when suspect information is available minimum="1" maximum="2", otherwise this key won't be present -->
+					{
+						"photo": String, 	<-- Servlet URL for callback on IJPortal to get Photo from Amber Alert Applciation"-->
+						"name": String,
+						"dob": String,
+						"sex": String,
+						"height": String,
+						"weight": String,
+						"hair": String,
+						"eyes": String,
+						"race": String
+					}
+				],
+				"vehicle": { 				<!--when vehicle information is available, otherwise this key won't be present -->
+					"photo": String, 		<!-- Servlet URL for callback on IJPortal to get the Photo from Amber Alert Applciation"-->
+					"year": String,
+					"make": String,
+					"model": String,
+					"color": String,
+					"plate": String,
+					"state": String
+				},
+				"otherInformation": String, <!--	maxLength="500" -->
+				"agencyInformation": {
+					"agencyName": String,
+					"phoneNo": String
+				},
+				
+			}
+		]
+	}
+}
