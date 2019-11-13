@@ -2,7 +2,7 @@
   "activeAmberAlerts" : true,
   "amberAlertSummaries" : [ {
     "alertId" : 470,
-    "alertStatus" : "CANCELLED",								<!-- Please note status cancelled. 	-->
+    "alertStatus" : "CANCELLED",
     "name" : "FMUX M JVFE",
     "dateAbducted" : "10/23/2019",
     "abductedFrom" : "Edison, New Jersey"
@@ -20,7 +20,7 @@
     "posterLink" : "Servlet URL to Retrieve Poster PDF",
     "regions" : [ 1, 2 ],
     "activationDateTime" : "10/23/2019 - 03:20:29 PM",
-    "cancellationDateTime" : "10/23/2019 - 03:20:56 PM",		<!-- Please note cancellation Date Time provided for cancelled amber alert. 	-->
+    "cancellationDateTime" : "10/23/2019 - 03:20:56 PM",
     "missingChildren" : [ {
       "photo" : "URL to be generated",
       "name" : "FMUX M JVFE",
