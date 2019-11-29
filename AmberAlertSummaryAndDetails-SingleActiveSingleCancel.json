@@ -22,7 +22,7 @@
     "activationDateTime" : "10/23/2019 - 03:20:29 PM",
     "cancellationDateTime" : "10/23/2019 - 03:20:56 PM",
     "missingChildren" : [ {
-      "photo" : "URL to be generated",
+      "photo" : "https://raw.githubusercontent.com/tjcrommie/amberalert/master/marydoe.PNG ",
       "name" : "Jamie Smith",
       "age" : "3 Months",
       "sex" : "Female",
@@ -32,7 +32,7 @@
       "eyes" : "brownish",
       "race" : "White"
     }, {
-      "photo" : "URL to be generated",
+      "photo" : "https://raw.githubusercontent.com/tjcrommie/amberalert/master/janedoe.PNG ",
       "name" : "Susan Smith",
       "age" : "3 Months",
       "sex" : "Female",
